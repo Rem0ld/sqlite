@@ -1,4 +1,4 @@
-package sqlite
+package libsql
 
 import (
 	"context"
@@ -7,6 +7,7 @@ import (
 
 	"gorm.io/gorm/callbacks"
 
+  _ "github.com/libsql/libsql-client-go/libsql"
 	_ "github.com/mattn/go-sqlite3"
 	"gorm.io/gorm"
 	"gorm.io/gorm/clause"
@@ -16,7 +17,7 @@ import (
 )
 
 // DriverName is the default driver name for SQLite.
-const DriverName = "sqlite3"
+const DriverName = "libsql"
 
 type Dialector struct {
 	DriverName string
